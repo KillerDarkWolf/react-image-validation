@@ -9,7 +9,10 @@ const App = () => {
     let [upload, setUpload] = useState()
 
     useEffect(() => {
-        console.log('making upload request...')
+        if (upload) {
+            console.log('making upload request...')
+            setUpload()
+        }
     }, [upload])
 
     return (
